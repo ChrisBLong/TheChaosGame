@@ -1,0 +1,131 @@
+/*
+
+The Chaos Game.
+Simple canvas-based web page developed by Chris Long for a YouTube video.
+November 2019.
+
+You are free to use and modify this web page (comprising the HTML, the CSS and the JavaScript) for any purpose.
+
+*/
+
+html, body {
+	font-family: sans-serif;
+	font-size: 14pt;
+	background: #ddddee;
+	margin: 0;
+	height: 100%;
+}
+
+#wholePage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#bodyContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#extra {
+  flex: 1 1 auto;
+}
+
+.heading {
+  font-size: 1.6em;
+  padding: 0px 5px;
+  margin: 0px 5px;
+  white-space: nowrap;
+  text-align: center;
+  flex-basis: min-content;
+}
+
+#canvasContainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+#infoPanel {
+  text-align: center;
+}
+
+#displayCanvas {
+	border: 1pt solid blue;
+	width: 95%;
+  box-shadow: 2px 2px 2px #4a5fa8;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.buttonContainer {
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buttonGroupLabel {
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.button {
+	font-size: 0.9em;
+	border: 1pt solid gray;
+	border-radius: 0.5em;
+	background: #eeeeee;
+	padding: 0.3em;
+	margin: 0.3em;
+	white-space: nowrap;
+  box-shadow: 2px 2px 2px #4a5fa8;
+}
+
+.button:active {
+  background: #aaaaaa;
+	box-shadow: none;
+}
+
+/* Adjustments for small screens */
+@media screen and (max-width: 800px) {
+
+  body {
+    font-size: 8pt;
+  }
+
+}
+
+/* Adjustments for landscape */
+@media screen and (orientation: landscape) {
+
+  #bodyContainer {
+    flex-direction: row;
+  }
+
+  #canvasContainer {
+    width: revert;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .button {
+    margin-bottom: 1.5em;
+  }
+  
+  .buttonGroupLabel {
+    margin-top: revert;
+    margin-bottom: revert;
+  }
+  
+
+}

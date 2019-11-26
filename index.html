@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>The Chaos Game</title>
+<meta name="description" content="Order from chaos; patterns from randomness." />
+<meta name="keywords" content="random, pattern, sierpinski, chaos, chaos game, canvas, interactive, explore" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="drawing.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<!-- 
+
+The Chaos Game.
+Simple canvas-based web page developed by Chris Long for a YouTube video.
+November 2019.
+
+You are free to use and modify this web page (comprising the HTML, the CSS and the JavaScript) for any purpose.
+
+-->
+
+<body onLoad='init();'>
+
+<div id="wholePage">
+
+  <div class="heading">The Chaos Game</div>
+
+  <div id="bodyContainer">
+  
+    <div id="canvasContainer">
+
+      <div id="extra">
+        <canvas id="displayCanvas">Canvas not supported.</canvas>
+      </div>
+      <div id="infoPanel"></div>
+      
+    </div>
+    
+    <div class="buttonContainer">
+      <div class="buttonGroupLabel">Draw:</div>
+      <button class="button" type="button" onclick="drawPoints(1);">One point</button>
+      <button class="button" type="button" onclick="drawPoints(50);">50 points</button>
+      <button class="button" type="button" onclick="drawPoints(1000);">1,000 points</button>  
+      <button class="button" type="button" onclick="drawPoints(10000);">10,000 points</button>
+      <button class="button" type="button" onclick="drawPoints(100000);">100,000 points</button>
+    </div>
+    <div class="buttonContainer">
+      <div class="buttonGroupLabel">Point size: </div>
+      <button class="button" type="button" onclick="setPointSize(8);">Massive</button>
+      <button class="button" type="button" onclick="setPointSize(4);">Big</button>
+      <button class="button" type="button" onclick="setPointSize(1);">Small</button>
+      <button class="button" type="button" onclick="setPointSize(0.4);">Barely visible</button>
+    </div>
+    <div class="buttonContainer">
+      <div class="buttonGroupLabel">Reset:</div>
+      <button class="button" type="button" onclick="reset('triangle');">Triangle</button>
+      <button class="button" type="button" onclick="reset('random triangle');">Random Triangle</button>
+      <button class="button" type="button" onclick="reset('rectangle');">Rectangle</button>
+      <button class="button" type="button" onclick="reset('quad');">Random Quad</button>
+    </div>
+
+  </div>
+  
+</div>
+
+</body>
+</html>
